@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ashwini</title>
+    {# <.link rel="stylesheet" href="SIH\static\styles.css"> #}
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <nav>
+        <div class="header">
+            <img src="{{ url_for('static', filename='nakshatra.png') }}" alt="Nakshatra Logo" class="logo">
+            <p class="title">ASHWINI नक्षत्रम</p>
+        </div>
+    </nav>
+
+
+
+    <div>
+        <video autoplay muted loop playsinline>
+            <source src="{{ url_for('static', filename='background1.mp4') }}" type="video/mp4">
+        </video>
+    </div>
+
+    <div class="container">
+        <div class="mic-container">
+            <button id="start-button">
+                <img src="{{ url_for('static', filename='mic-icon.png') }}" alt="Mic" class="mic-icon">
+            </button>
+        </div>
+        <div class="text-container">
+            <p id="result">Say "Ashwini" to start...</p>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.0/socket.io.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
